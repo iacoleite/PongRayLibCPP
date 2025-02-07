@@ -30,13 +30,15 @@ public:
 
         if (ball_y + ball_radius >= screenHeight)
         {
-			ball_y = screenHeight - ball_radius;
+            ball_y = screenHeight / 2;
+            ball_x = screenWidth / 2;
             ball_speed_y *= -1;
 		}
-        //if (ball_y - ball_radius <= 0) {
-        //    ball_y = ball_radius;
-        //    ball_speed_y *= -1;
-        //}
+        if (ball_y - ball_radius <= 0) {
+            ball_y = screenHeight/2;
+            ball_x = screenWidth/2;
+            ball_speed_y *= -1;
+        }
     }
 
 public:
